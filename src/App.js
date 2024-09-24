@@ -17,9 +17,13 @@ function App() {
   const [atividade, setAtividade] = useState('');
   const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
   const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
+  const [mensagem, setMensagem] = useState('');
 
   const adicionarAtividade = () => {
-    if (!atividade) return;
+    if (!atividade) {
+      setMensagem('Por favor, insira uma atividade.');
+      return;
+    }
 
     setEstudos((prevEstudos) => ({
       ...prevEstudos,
@@ -29,8 +33,13 @@ function App() {
       },
     }));
 
-    // Limpar os campos após adicionar
     setAtividade('');
+    setMensagem(`Atividade "${atividade}" adicionada com sucesso!`);
+    setDiaSelecionado('Segunda-feira');
+    setPeriodoSelecionado('manha');
+
+    // Limpar a mensagem após 3 segundos
+    setTimeout(() => setMensagem(''), 3000);
   };
 
   return (
@@ -61,6 +70,8 @@ function App() {
         />
         <button onClick={adicionarAtividade}>Adicionar Estudo</button>
       </div>
+
+      {mensagem && <div className="mensagem">{mensagem}</div>}
 
       {diasDaSemana.map(dia => (
         <div key={dia} className="dia-container">
