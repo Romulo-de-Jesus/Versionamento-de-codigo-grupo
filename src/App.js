@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+
   const diasDaSemana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo'];
 
   const [estudos, setEstudos] = useState({
@@ -15,12 +16,13 @@ function App() {
   });
 
   const [atividade, setAtividade] = useState('');
-  const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
-  const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
+  const [diaSelecionado, setDiaSelecionado] = useState('');
+  const [periodoSelecionado, setPeriodoSelecionado] = useState('');
 
   const adicionarAtividade = () => {
     if (!atividade) return;
-
+    if (!diaSelecionado) return;
+    if (!periodoSelecionado) return;
     setEstudos((prevEstudos) => ({
       ...prevEstudos,
       [diaSelecionado]: {
@@ -40,6 +42,7 @@ function App() {
       <div className="input-container">
         <label>Dia:</label>
         <select value={diaSelecionado} onChange={(e) => setDiaSelecionado(e.target.value)}>
+          <option value="" disabled>Selecione um dia da semana</option>
           {diasDaSemana.map(dia => (
             <option key={dia} value={dia}>{dia}</option>
           ))}
@@ -47,6 +50,7 @@ function App() {
 
         <label>Período:</label>
         <select value={periodoSelecionado} onChange={(e) => setPeriodoSelecionado(e.target.value)}>
+          <option value="" disabled>Selecione um período</option>
           <option value="manha">Manhã</option>
           <option value="tarde">Tarde</option>
           <option value="noite">Noite</option>

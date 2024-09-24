@@ -82,4 +82,5 @@ button:hover {
 
 select{
   cursor: pointer;
+  margin-top: 10px;
 }
