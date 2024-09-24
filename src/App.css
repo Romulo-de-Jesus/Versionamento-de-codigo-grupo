@@ -44,7 +44,7 @@ h2 {
 
 label {
   display: inline-block;
-  width: 100px;
+  width: 80px;
   color: #d9534f; /* Vermelho escuro para os rótulos */
 }
 
@@ -71,8 +71,15 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 0px;
 }
 
 button:hover {
   background-color: #dc143c; /* Vermelho escuro */
+}
+
+select{
+  cursor: pointer;
 }
