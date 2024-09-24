@@ -20,9 +20,9 @@ function App() {
   const [periodoSelecionado, setPeriodoSelecionado] = useState('');
 
   const adicionarAtividade = () => {
-    if (!atividade) return;
-    if (!diaSelecionado) return;
-    if (!periodoSelecionado) return;
+    if (!atividade) return; //Se nenhuma atividade estiver selecionada, return
+    if (!diaSelecionado) return; //Se nenhum dia estiver selecionado, return
+    if (!periodoSelecionado) return; //Se nenhum período estiver selecionado, return
     setEstudos((prevEstudos) => ({
       ...prevEstudos,
       [diaSelecionado]: {
