@@ -7,7 +7,7 @@ body {
 }
 
 .app-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
@@ -36,7 +36,10 @@ h2 {
   color: 
 #0ce6f2
 ; /* Laranja vibrante para os dias da semana */
-  margin-bottom: 10px;
+  margin: 10px;
+  justify-content: center;
+  text-align: center;
+
 }
 
 .periodo-container {
@@ -56,16 +59,17 @@ label {
 
 input[type="text"],
 select {
-  width: calc(100% - 110px);
   padding: 8px;
   border: 1px solid #0098db; /* Bordas do campo de texto em Azul */
   border-radius: 5px;
   background-color: #203562; /* Fundo suave no campo de entrada */
   color: #fff;
+  margin-top: 10px
 }
 
 input[type="text"]:focus,
 select:focus {
+  
   border-color: #47f6ff; /* Realce da borda ao focar */
   outline: none;
 }
@@ -79,9 +83,25 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 button:hover {
   background-color: #0ce6f2; /* Azul claro */
   
+}
+select{
+  width: calc(100% - 190px);
+}
+
+.dias{
+  display:flex; 
+  justify-content: center;
+  width: calc(100% - 190px);
+  margin:auto;
+}
+
+.dia-container{
+  margin: 10px;
+  justify-content: center;
 }

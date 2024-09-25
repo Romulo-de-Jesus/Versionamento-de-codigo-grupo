@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const diasDaSemana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo'];
+  const diasDaSemana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
 
   const [estudos, setEstudos] = useState({
-    'Segunda-feira': { manha: '', tarde: '', noite: '' },
-    'Terça-feira': { manha: '', tarde: '', noite: '' },
-    'Quarta-feira': { manha: '', tarde: '', noite: '' },
-    'Quinta-feira': { manha: '', tarde: '', noite: '' },
-    'Sexta-feira': { manha: '', tarde: '', noite: '' },
+    'Segunda': { manha: '', tarde: '', noite: '' },
+    'Terça': { manha: '', tarde: '', noite: '' },
+    'Quarta': { manha: '', tarde: '', noite: '' },
+    'Quinta': { manha: '', tarde: '', noite: '' },
+    'Sexta': { manha: '', tarde: '', noite: '' },
     'Sábado': { manha: '', tarde: '', noite: '' },
     'Domingo': { manha: '', tarde: '', noite: '' },
   });
 
   const [atividade, setAtividade] = useState('');
-  const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
+  const [diaSelecionado, setDiaSelecionado] = useState('Segunda');
   const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
 
   const adicionarAtividade = () => {
@@ -59,9 +59,11 @@ function App() {
           onChange={(e) => setAtividade(e.target.value)}
           placeholder="Ex: Matemática"
         />
+        <br></br>
         <button onClick={adicionarAtividade}>Adicionar Estudo</button>
       </div>
 
+    <div className='dias'>
       {diasDaSemana.map(dia => (
         <div key={dia} className="dia-container">
           <h2>{dia}</h2>
@@ -76,6 +78,7 @@ function App() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
