@@ -1,6 +1,6 @@
 body {
-  background-color: #e6f7ff; /* Azul claro */
-  color: #333;
+  background-color: #000; /* Fundo Preto para um alívio visual */
+  color: #0098db;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -11,12 +11,14 @@ body {
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
-  background-color: #fff; /* Fundo branco */
+  background-color:  #04030e; /* Fundo preto */
+  border-style: solid;
+  border-color: #0098db;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #ff0000; /* Vermelho vibrante para o título principal */
+  color: #0ce6f2; /* Azul vibrante para o título principal */
   text-align: center;
   margin-bottom: 30px;
 }
@@ -24,47 +26,53 @@ h1 {
 .input-container {
   margin-bottom: 20px;
   padding: 10px;
-  border: 2px solid #ff4500; /* Bordas em vermelho */
+  border: 2px solid #0098db
+; /* Bordas em Azul */
   border-radius: 5px;
-  background-color: #ffe6e6; /* Fundo suave em tom de vermelho claro */
+  background-color: #201533; /* Fundo suave em tom de Azul claro */
 }
 
 h2 {
-  color: #ff4500; /* Laranja vibrante para os dias da semana */
+  color: 
+#0ce6f2
+; /* Laranja vibrante para os dias da semana */
   margin-bottom: 10px;
 }
 
 .periodo-container {
   margin-bottom: 10px;
   padding: 5px;
-  border: 1px solid #ff4500; /* Bordas em vermelho */
+  border: 1px solid #0098db
+; /* Bordas em Azul */
   border-radius: 5px;
-  background-color: #ffcccb; /* Fundo suave em tom de vermelho */
+  background-color: #201533; /* Fundo suave em tom de Azul */
 }
 
 label {
   display: inline-block;
   width: 100px;
-  color: #d9534f; /* Vermelho escuro para os rótulos */
+  color: #0098db; /* Azul escuro para os rótulos */
 }
 
 input[type="text"],
 select {
   width: calc(100% - 110px);
   padding: 8px;
-  border: 1px solid #d9534f; /* Bordas do campo de texto em vermelho */
+  border: 1px solid #0098db; /* Bordas do campo de texto em Azul */
   border-radius: 5px;
-  background-color: #ffe4e1; /* Fundo suave no campo de entrada */
+  background-color: #203562; /* Fundo suave no campo de entrada */
+  color: #fff;
 }
 
 input[type="text"]:focus,
 select:focus {
-  border-color: #ff6347; /* Realce da borda ao focar */
+  border-color: #47f6ff; /* Realce da borda ao focar */
   outline: none;
 }
 
 button {
-  background-color: #ff4500; /* Vermelho */
+  background-color: #0098db
+; /* Azul */
   color: white;
   padding: 10px;
   border: none;
@@ -74,5 +82,6 @@ button {
 }
 
 button:hover {
-  background-color: #dc143c; /* Vermelho escuro */
+  background-color: #0ce6f2; /* Azul claro */
+  
 }
