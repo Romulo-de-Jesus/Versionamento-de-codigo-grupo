@@ -105,3 +105,8 @@ select{
   margin: 10px;
   justify-content: center;
 }
+.btn_limpar{
+  width: 80px;
+  background-color: #00000011;
+  
+}

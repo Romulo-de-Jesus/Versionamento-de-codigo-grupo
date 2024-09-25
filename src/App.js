@@ -33,6 +33,17 @@ function App() {
     setAtividade('');
   };
 
+  const botaoLimpar = () => {
+    setEstudos({
+      'Segunda': { manha: '', tarde: '', noite: '' },
+      'Terça': { manha: '', tarde: '', noite: '' },
+      'Quarta': { manha: '', tarde: '', noite: '' },
+      'Quinta': { manha: '', tarde: '', noite: '' },
+      'Sexta': { manha: '', tarde: '', noite: '' },
+      'Sábado': { manha: '', tarde: '', noite: '' },
+      'Domingo': { manha: '', tarde: '', noite: '' },
+    });
+  }
   return (
     <div className="app-container">
       <h1>Gerenciador de Estudos 2024</h1>
@@ -60,7 +71,8 @@ function App() {
           placeholder="Ex: Matemática"
         />
         <br></br>
-        <button onClick={adicionarAtividade}>Adicionar Estudo</button>
+        <button onClick={adicionarAtividade}>Adicionar Estudo</button> <br></br>
+        <button className="btn_limpar" onClick={botaoLimpar}>Limpar</button>
       </div>
 
     <div className='dias'>
